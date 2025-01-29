@@ -39,8 +39,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg3
+    uniqueID: 3220512997
+    locked: 0
+  - name: bg2
+    uniqueID: 3920762083
+    locked: 0
+  - name: bg1
+    uniqueID: 1937603419
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: grass
+    uniqueID: 385613901
     locked: 0
   m_RenderingLayers:
   - Default

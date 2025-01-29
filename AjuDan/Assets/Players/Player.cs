@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     private float dir;
     private bool facingright = true;
     private bool isGrounded = true;
+    private bool isAttack = false;
 
     //public variable
     public float speed = 2f;
@@ -40,7 +41,6 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
             jump();
-            isGrounded = false;
         }
 
         //animation hendling
@@ -52,6 +52,11 @@ public class Player : MonoBehaviour
         {
             anim.SetFloat("speed", 0f);
         }
+
+        //attack animation hendling
+        if (Input.GetMouseButtonDown(0)){
+            anim.SetTrigger("attack");
+        }
     }
 
     private void FixedUpdate()
@@ -62,7 +67,8 @@ public class Player : MonoBehaviour
 
     void jump()
     {
-        Rb_source.AddForce(new Vector2(0f, jump_height), ForceMode2D.Impulse);
+        Rb_source.linearVelocity = new Vector2(Rb_source.linearVelocity.x, 0f); // Reset kecepatan vertikal agar lompatan konsisten
+        Rb_source.AddForce(Vector2.up * jump_height, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,6 +76,17 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            anim.SetBool("jump",false);
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+            anim.SetBool("jump",true);
+        }
+
     }
 }
