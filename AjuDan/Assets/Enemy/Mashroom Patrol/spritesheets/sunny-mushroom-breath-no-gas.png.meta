@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 7951f59b64a615148a7d7e51bd18a661
+guid: ffae1fe81eb20744187a4982e40c3ee0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -17047998526634394
-    second: BG_3_0
+      213: -7910623409094357464
+    second: sunny-mushroom-breath-no-gas_0
+  - first:
+      213: 307694565765962887
+    second: sunny-mushroom-breath-no-gas_1
+  - first:
+      213: -6494309541637083692
+    second: sunny-mushroom-breath-no-gas_2
+  - first:
+      213: 4364757195376656044
+    second: sunny-mushroom-breath-no-gas_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG_3_0
+      name: sunny-mushroom-breath-no-gas_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 0
-        width: 2048
-        height: 400
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66640b78fee63cff0800000000000000
-      internalID: -17047998526634394
+      spriteID: 82e8a05fbe1d73290800000000000000
+      internalID: -7910623409094357464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath-no-gas_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c5ccbc396254400800000000000000
+      internalID: 307694565765962887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath-no-gas_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ddaa4551e39fd5a0800000000000000
+      internalID: -6494309541637083692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath-no-gas_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae71413b8bb29c30800000000000000
+      internalID: 4364757195376656044
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BG_3_0: -17047998526634394
+      sunny-mushroom-breath-no-gas_0: -7910623409094357464
+      sunny-mushroom-breath-no-gas_1: 307694565765962887
+      sunny-mushroom-breath-no-gas_2: -6494309541637083692
+      sunny-mushroom-breath-no-gas_3: 4364757195376656044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

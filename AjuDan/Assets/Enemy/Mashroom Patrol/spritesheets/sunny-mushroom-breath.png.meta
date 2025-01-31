@@ -1,0 +1,401 @@
+fileFormatVersion: 2
+guid: 612db4cf937cc344fb0b4ceb3865c524
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1975693124345049789
+    second: sunny-mushroom-breath_0
+  - first:
+      213: 9102329319956925530
+    second: sunny-mushroom-breath_1
+  - first:
+      213: 1251941718140490698
+    second: sunny-mushroom-breath_2
+  - first:
+      213: -8133152458743773106
+    second: sunny-mushroom-breath_3
+  - first:
+      213: -7231854516620059428
+    second: sunny-mushroom-breath_4
+  - first:
+      213: 8431857819707468928
+    second: sunny-mushroom-breath_5
+  - first:
+      213: -5802790235626893061
+    second: sunny-mushroom-breath_6
+  - first:
+      213: -1252085422291227413
+    second: sunny-mushroom-breath_7
+  - first:
+      213: -3794217619075284682
+    second: sunny-mushroom-breath_8
+  - first:
+      213: 1876926055643808220
+    second: sunny-mushroom-breath_9
+  - first:
+      213: -8696638143735648663
+    second: sunny-mushroom-breath_10
+  - first:
+      213: -9056203981088761145
+    second: sunny-mushroom-breath_11
+  - first:
+      213: 4428671020133976893
+    second: sunny-mushroom-breath_12
+  - first:
+      213: -2280415969850388524
+    second: sunny-mushroom-breath_13
+  - first:
+      213: -8967274986400636435
+    second: sunny-mushroom-breath_14
+  - first:
+      213: -2310390811634075672
+    second: sunny-mushroom-breath_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2b4cdcd621b6b10800000000000000
+      internalID: 1975693124345049789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cc7a05a48f15e70800000000000000
+      internalID: 9102329319956925530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3914d0c5acf5110800000000000000
+      internalID: 1251941718140490698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e488b781eec312f80800000000000000
+      internalID: -8133152458743773106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc9e8512aa43ab90800000000000000
+      internalID: -7231854516620059428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c634c530af30570800000000000000
+      internalID: 8431857819707468928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf09a537609587fa0800000000000000
+      internalID: -5802790235626893061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6314d769d2b385bc0800000000000000
+      internalID: -3794217619075284682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cad9b50676e15280800000000000000
+      internalID: -9056203981088761145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunny-mushroom-breath_12
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b072624dcc57d30800000000000000
+      internalID: 4428671020133976893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2e7d6a826a32d92479233d65e178c290
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sunny-mushroom-breath_0: 1975693124345049789
+      sunny-mushroom-breath_1: 9102329319956925530
+      sunny-mushroom-breath_10: -8696638143735648663
+      sunny-mushroom-breath_11: -9056203981088761145
+      sunny-mushroom-breath_12: 4428671020133976893
+      sunny-mushroom-breath_13: -2280415969850388524
+      sunny-mushroom-breath_14: -8967274986400636435
+      sunny-mushroom-breath_15: -2310390811634075672
+      sunny-mushroom-breath_2: 1251941718140490698
+      sunny-mushroom-breath_3: -8133152458743773106
+      sunny-mushroom-breath_4: -7231854516620059428
+      sunny-mushroom-breath_5: 8431857819707468928
+      sunny-mushroom-breath_6: -5802790235626893061
+      sunny-mushroom-breath_7: -1252085422291227413
+      sunny-mushroom-breath_8: -3794217619075284682
+      sunny-mushroom-breath_9: 1876926055643808220
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

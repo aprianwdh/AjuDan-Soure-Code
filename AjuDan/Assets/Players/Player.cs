@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private float dir;
     private bool facingright = true;
     private bool isGrounded = true;
-    private bool isAttack = false;
+    //private bool isAttack = false;
 
     //public variable
     public float speed = 2f;
