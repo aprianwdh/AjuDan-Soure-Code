@@ -1,26 +1,27 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class EnemyPatrol : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
     public float speed = 2f;
-    public float waitTime = 2f; // Waktu berhenti di tiap titik
-    public SpriteRenderer flip;
+    public float waitTime = 2f;
     public Animator anim;
     public float rangeDistance = 2f;
     public GameObject player;
     public float attackDistance = 2f;
     public float chaseSpeed = 3f;
+    public Transform ground_check;
+    public float ground_check_distance = 0.1f;
+    public LayerMask layer_mask;
+    public LayerMask attack_layer;
 
     private Rigidbody2D Rb;
     private Transform currentPoint;
-    private bool isWaiting = false; // Cek apakah musuh sedang berhenti
+    private bool isWaiting = false;
     private bool inRange = false;
-    private bool inGround = true;
-
+    private bool facingRight = true;
 
     void Start()
     {
@@ -28,113 +29,127 @@ public class EnemyPatrol : MonoBehaviour
         currentPoint = pointB.transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        //menentukan apakah ada di dalam range atau tidak
-        if (Vector2.Distance(transform.position, player.transform.position) <= rangeDistance) 
+        bool hit = Physics2D.Raycast(ground_check.position, Vector2.down, ground_check_distance, layer_mask);
+
+        // Menentukan apakah player berada dalam jangkauan musuh
+        inRange = Vector2.Distance(transform.position, player.transform.position) <= rangeDistance;
+
+        if (inRange && hit) // Mengejar dan menyerang player
         {
-            inRange = true;
+            //Debug.Log("Player dalam jangkauan");
+            ChasePlayer();
         }
-        else 
-        { 
-            inRange= false;
-        }
-
-        if (inRange) // jika di dalam range akan mengejar danmenyerang player
+        else if (!isWaiting) // Jika tidak mengejar, lakukan patroli
         {
-            //fungsi untuk flip enemy saat mengejar player
-            if (player.transform.position.x > transform.position.x)
-            {
-                flip.flipX = false;
-            }
-            else 
-            {
-                flip.flipX = true;
-            }
-
-            //fungsi agar musuh bergerak ke arah player dan menyerang player
-            if (Vector2.Distance(transform.position, player.transform.position) >  attackDistance)
-            {
-                anim.SetBool("attack",false);
-                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, chaseSpeed * Time.fixedDeltaTime);
-            }
-
-            else
-            {
-                anim.SetBool("attack",true);
-            }
+            MoveEnemy();
         }
-        else // jika diluar range akan patroli
+    }
+
+    void ChasePlayer()
+    {
+        // Flip musuh sesuai arah player
+        if (player.transform.position.x > transform.position.x && !facingRight)
         {
-            if (!isWaiting) // Hanya bergerak jika tidak sedang menunggu
-            {
-                MoveEnemy();
-            }
+            Flip();
+        }
+        else if (player.transform.position.x < transform.position.x && facingRight)
+        {
+            Flip();
         }
 
+        // Jika jarak lebih jauh dari attackDistance, kejar player
+        if (Vector2.Distance(transform.position, player.transform.position) > attackDistance)
+        {
+            anim.SetBool("attack", false);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, chaseSpeed * Time.fixedDeltaTime);
+        }
+        else // Jika dalam attackDistance, lakukan serangan
+        {
+            anim.SetBool("attack", true);
+        }
     }
 
     void MoveEnemy()
     {
-        if (currentPoint == pointB.transform)
+        // Flip musuh sesuai arah gerakan
+        if (currentPoint.position.x > transform.position.x && !facingRight)
         {
-            flip.flipX = false;
+            Flip();
         }
-        else
+        else if (currentPoint.position.x < transform.position.x && facingRight)
         {
-            flip.flipX = true;
+            Flip();
         }
 
-        Vector2 targetPosition = currentPoint.position;
-        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
-
-        Rb.linearVelocity = new Vector2(direction.x * speed, Rb.linearVelocity.y);
+        // Gerakkan musuh menuju titik tujuan
+        Vector2 direction = ((Vector2)currentPoint.position - (Vector2)transform.position).normalized;
+        Rb.linearVelocity = new Vector2(direction.x * speed, 0); // Pastikan hanya bergerak horizontal
 
         // Jika musuh hampir sampai ke titik tujuan
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f)
         {
-            StartCoroutine(WaitAtPoint()); // Mulai delay
+            StartCoroutine(WaitAtPoint());
         }
     }
 
     IEnumerator WaitAtPoint()
     {
-        isWaiting = true; // Berhenti bergerak
-        anim.SetBool("isWaiting", isWaiting);
-        Rb.linearVelocity = Vector2.zero; // Set kecepatan jadi 0
-        yield return new WaitForSeconds(waitTime); // Tunggu beberapa detik
+        isWaiting = true;
+        anim.SetBool("isWaiting", true);
+        Rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(waitTime);
 
-        // Pindah ke titik tujuan berikutnya
-        if (currentPoint == pointA.transform)
+        // Berpindah ke titik tujuan berikutnya
+        currentPoint = (currentPoint == pointA.transform) ? pointB.transform : pointA.transform;
+
+        isWaiting = false;
+        anim.SetBool("isWaiting", false);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.localScale = new Vector3(facingRight ? 1 : -1, 1, 1);
+    }
+
+    public void attack()
+    {
+        // Lakukan serangan
+        Collider2D inRangeAttack =  Physics2D.OverlapCircle(transform.position, attackDistance, attack_layer);
+        if (inRangeAttack)
         {
-            currentPoint = pointB.transform;
-            flip.flipX = false;
-        }
-        else
-        {
-            currentPoint = pointA.transform;
-            flip.flipX = true;
-        }
+            if (inRangeAttack.GetComponent<Player>() != null)
+            {
+                inRangeAttack.GetComponent<Player>().Take_Damage(1);
+                Debug.Log("Serang player");
+            }
+            else
+            {
+                Debug.Log("Tidak ada script player");
+            }
 
-        isWaiting = false; // Mulai bergerak lagi
-        anim.SetBool("isWaiting", isWaiting);
-
+        }
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.green;
         Gizmos.DrawSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
 
-        //gizmo chase area
+        // Gizmo chase area
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, rangeDistance);
 
-        //gizmo untuk attack area
-        Gizmos.color = Color.red;
+        // Gizmo attack area
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, attackDistance);
+
+        // Gizmo ground check
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(ground_check.position, Vector2.down * ground_check_distance);
     }
-
-
 }

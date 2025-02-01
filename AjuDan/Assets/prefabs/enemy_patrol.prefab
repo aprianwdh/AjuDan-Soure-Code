@@ -269,6 +269,10 @@ MonoBehaviour:
   waitTime: 2
   flip: {fileID: 3197795658339054552}
   anim: {fileID: 4181197319270978593}
+  rangeDistance: 6
+  player: {fileID: 0}
+  attackDistance: 1.5
+  chaseSpeed: 2
 --- !u!1 &8198621776080829652
 GameObject:
   m_ObjectHideFlags: 0

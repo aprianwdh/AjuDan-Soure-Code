@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -14,16 +15,24 @@ public class Player : MonoBehaviour
     public Rigidbody2D Rb_source;
     public float jump_height = 5f;
     public Animator anim;
+    public int max_health = 3;
+    public Text health_text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        health_text.text = max_health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //mengecek apakah health player sudah habis
+        if (max_health <= 0)
+        {
+            die();
+        }
+
         // variabel dir untuk menentukan kanan dan kiri
         dir = Input.GetAxis("Horizontal");
         if (dir < 0 && facingright)
@@ -54,7 +63,8 @@ public class Player : MonoBehaviour
         }
 
         //attack animation hendling
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
             anim.SetTrigger("attack");
         }
     }
@@ -76,7 +86,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            anim.SetBool("jump",false);
+            anim.SetBool("jump", false);
         }
     }
 
@@ -85,8 +95,23 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
-            anim.SetBool("jump",true);
+            anim.SetBool("jump", true);
         }
 
+    }
+
+    public void Take_Damage(int damage)
+    {
+        if (max_health > 0)
+        {
+            max_health -= damage;
+            health_text.text = max_health.ToString();
+        }
+    }
+
+    void die()
+    {
+        //Destroy(gameObject);
+        Debug.Log("Player mati");
     }
 }
