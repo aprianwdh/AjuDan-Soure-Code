@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class EnemyPatrol : MonoBehaviour
     public float ground_check_distance = 0.1f;
     public LayerMask layer_mask;
     public LayerMask attack_layer;
+
+    public int maxHealt = 5;
 
     private Rigidbody2D Rb;
     private Transform currentPoint;
@@ -131,6 +134,24 @@ public class EnemyPatrol : MonoBehaviour
             }
 
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (maxHealt >= 0)
+        {
+            maxHealt -= damage;
+            if (maxHealt <= 0)
+            {
+                die();
+            }
+        }
+    }
+
+    public void die()
+    {
+        Destroy(this.gameObject);
+        Debug.Log("Enemy mati");
     }
 
     private void OnDrawGizmos()

@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     public Animator anim;
     public int max_health = 3;
     public Text health_text;
+    public Transform attack_point;
+    public float attack_range = 0.5f;
+    public LayerMask enemy_layer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,11 +30,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //mengecek apakah health player sudah habis
-        if (max_health <= 0)
-        {
-            die();
-        }
 
         // variabel dir untuk menentukan kanan dan kiri
         dir = Input.GetAxis("Horizontal");
@@ -100,12 +98,28 @@ public class Player : MonoBehaviour
 
     }
 
+    public void Attack()
+    {
+        Collider2D inRangeAttack =  Physics2D.OverlapCircle(attack_point.position, attack_range, enemy_layer);
+        if (inRangeAttack)
+        {
+            inRangeAttack.GetComponent<EnemyPatrol>().TakeDamage(1);
+            Debug.Log("Enemy terkena serangan");
+        }
+    }
+
     public void Take_Damage(int damage)
     {
-        if (max_health > 0)
+        if (max_health >= 0)
         {
             max_health -= damage;
             health_text.text = max_health.ToString();
+
+            if (max_health <= 0)
+            {
+                //mengecek apakah health player sudah habis
+                die();
+            }
         }
     }
 
@@ -113,5 +127,10 @@ public class Player : MonoBehaviour
     {
         //Destroy(gameObject);
         Debug.Log("Player mati");
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attack_point.position, attack_range);
     }
 }

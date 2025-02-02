@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6043208898894004660}
   - component: {fileID: 5999671895121601840}
   - component: {fileID: 525239658789036569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5999671895121601840
 MonoBehaviour:
@@ -156,6 +156,13 @@ MonoBehaviour:
   Rb_source: {fileID: 6043208898894004660}
   jump_height: 10
   anim: {fileID: 3132495105061329260}
+  max_health: 3
+  health_text: {fileID: 0}
+  attack_point: {fileID: 0}
+  attack_range: 0.5
+  enemy_layer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!70 &525239658789036569
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
