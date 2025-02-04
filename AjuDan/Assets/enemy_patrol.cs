@@ -34,6 +34,11 @@ public class EnemyPatrol : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (FindAnyObjectByType<GameManager>().ActiveGame == false)
+        {
+            return;
+        }
+
         bool hit = Physics2D.Raycast(ground_check.position, Vector2.down, ground_check_distance, layer_mask);
 
         // Menentukan apakah player berada dalam jangkauan musuh

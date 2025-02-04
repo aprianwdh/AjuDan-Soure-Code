@@ -30,6 +30,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FindAnyObjectByType<GameManager>().ActiveGame == false)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
 
         // variabel dir untuk menentukan kanan dan kiri
         dir = Input.GetAxis("Horizontal");
@@ -127,6 +132,7 @@ public class Player : MonoBehaviour
     {
         //Destroy(gameObject);
         Debug.Log("Player mati");
+        FindAnyObjectByType<GameManager>().ActiveGame = false;
     }
 
     private void OnDrawGizmos()
