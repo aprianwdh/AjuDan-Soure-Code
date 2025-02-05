@@ -20,22 +20,19 @@ public class Player : MonoBehaviour
     public Transform attack_point;
     public float attack_range = 0.5f;
     public LayerMask enemy_layer;
+  
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         health_text.text = max_health.ToString();
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (FindAnyObjectByType<GameManager>().ActiveGame == false)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-
         // variabel dir untuk menentukan kanan dan kiri
         dir = Input.GetAxis("Horizontal");
         if (dir < 0 && facingright)
@@ -74,6 +71,12 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (FindAnyObjectByType<GameManager>().gameWin)
+        {
+            anim.SetFloat("speed", 0f);
+            transform.position = transform.position;
+            return;
+        }
         // move player
         transform.position += speed * Time.fixedDeltaTime * new Vector3(dir, 0f, 0f);
     }
