@@ -111,6 +111,7 @@
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
     <Compile Include="Assets\enemy_patrol.cs" />
     <Compile Include="Assets\Coin.cs" />
+    <Compile Include="Assets\AudioManager.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
   </ItemGroup>
   <ItemGroup>

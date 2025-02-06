@@ -20,7 +20,9 @@ public class Player : MonoBehaviour
     public Transform attack_point;
     public float attack_range = 0.5f;
     public LayerMask enemy_layer;
-  
+    AudioManager audioManager = FindAnyObjectByType<AudioManager>();
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour
         //attack animation hendling
         if (Input.GetMouseButtonDown(0))
         {
+            //FindAnyObjectByType<AudioManager>().PlayAttackSfx();
             anim.SetTrigger("attack");
         }
     }

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|D:\\GameDev(unity)\\AjuDan\\AjuDan\\assets\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|d:\\gamedev(unity)\\ajudan\\ajudan\\assets\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|solutionrelative:assets\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,11 @@
       "RelativeMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy_patrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|d:\\gamedev(unity)\\ajudan\\ajudan\\assets\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|d:\\gamedev(unity)\\ajudan\\ajudan\\assets\\finishpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|solutionrelative:assets\\finishpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|D:\\GameDev(unity)\\AjuDan\\AjuDan\\assets\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3049A7F-BD80-C8D9-2897-C3655A6614B4}|Assembly-CSharp.csproj|solutionrelative:assets\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "FinishPoint.cs",
+              "DocumentMoniker": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\FinishPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\FinishPoint.cs",
+              "ToolTip": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\FinishPoint.cs",
+              "RelativeToolTip": "Assets\\FinishPoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T11:34:25.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Coin.cs",
               "DocumentMoniker": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\Coin.cs",
               "RelativeDocumentMoniker": "Assets\\Coin.cs",
@@ -38,8 +55,7 @@
               "RelativeToolTip": "Assets\\Coin.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAcwBsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T11:36:02.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T11:36:02.98Z"
             },
             {
               "$type": "Document",
@@ -49,7 +65,7 @@
               "RelativeDocumentMoniker": "Assets\\GameManager.cs",
               "ToolTip": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\GameManager.cs",
               "RelativeToolTip": "Assets\\GameManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBUAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T10:42:57.731Z",
               "EditorCaption": ""
@@ -62,7 +78,7 @@
               "RelativeDocumentMoniker": "Assets\\enemy_patrol.cs",
               "ToolTip": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\enemy_patrol.cs",
               "RelativeToolTip": "Assets\\enemy_patrol.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowCYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T06:48:05.878Z",
               "EditorCaption": ""
@@ -75,7 +91,7 @@
               "RelativeDocumentMoniker": "Assets\\Players\\Player.cs",
               "ToolTip": "D:\\GameDev(unity)\\AjuDan\\AjuDan\\Assets\\Players\\Player.cs",
               "RelativeToolTip": "Assets\\Players\\Player.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAcwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAA3wE0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T10:59:23.713Z",
               "EditorCaption": ""
